@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Amazon Amber";
+  src: url("./Assets/AmazonEmber.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Amazon Amber";
+  src: url("./Assets/AmazonEmberBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+html,
+body {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1500px;
+  position: relative;
+  margin: 0 auto; 
+}
+.mainPage h2 {
+  font-size: 21px;
+  color: #0f1111;
+  margin: 0 0 5px 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Amazon Amber", sans-serif;
+}

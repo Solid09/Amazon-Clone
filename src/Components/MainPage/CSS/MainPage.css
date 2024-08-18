@@ -1,13 +1,24 @@
 /* ========= BackGround Image ========= */
-.mainBGImg {
+.bgImg {
   width: 1500px;
-  height: 600px;
+  position: relative;
 }
-.bgImg_img{
-  width: 1500px;
+.bgImgGradient{
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  background-image: linear-gradient(to top, #E3E6E6, transparent);
+  z-index: -1;
+}
+.bgImg_img {
+  width: 100%;
   height: 600px;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
+  object-fit: cover;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -48,35 +59,4 @@
   border: 2px solid rgb(82, 140, 191);
   border-radius: 2px;
   box-shadow: 0 0 0 2px white;
-}
-
-/* ========= Gaming Accessories ========= */
-.productContainer{
-  background-color: white;
-  padding: 20px 20px 15px;
-}
-.productContainer a{
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-}
-.productContainer a img{
-  width: 143px;
-  height: 120px;
-}
-.productContainer a span{
-  font-size: 12px;
-  color: #0F1111;
-}
-
-
-/* ========= Misc. ========= */
-.seeMoreLink{
-  font-size: 13px;
-  color: #007185;
-  text-decoration: none;
-  margin-top: 30px;
-}
-.seeMoreLink:hover{
-  color: rgb(255, 166, 0);
 }
