@@ -11,16 +11,24 @@ function ProductCardList(props) {
               display: "grid",
               gridTemplateColumns: `repeat(2, 1fr)`,
               gridTemplateRows: `repeat(2, 1fr)`,
-              paddingBottom: "20px",
-              gap: "20px",
+              padding: "10px 0 20px 0",
+              gap: "15px",
             }}
           >
             {Array(4)
               .fill()
               .map((_, index) => (
                 <a key={index} href="#">
-                  <img src={props.productPlaceHolderImg} />
-                  <span>{props.productImgTextPlaceHolder}</span>
+                  <img
+                    src={props.productCardData[index].img}
+                    alt={props.productCardData[index].name}
+                    style={{
+                      width: "132px",
+                      objectFit: "cover",
+                      height: "115px",   
+                    }}
+                  />
+                  <span>{props.productCardData[index].name}</span>
                 </a>
               ))}
           </div>
@@ -35,11 +43,13 @@ function ProductCardList(props) {
           <h2>{props.Header}</h2>
           <a href="#">
             <img
-              src={props.productPlaceHolderImg}
+              src={props.productCardData.img}
               style={{
                 height: "300px",
                 width: "100%",
+                objectFit: "cover",
               }}
+              alt={props.productCardData.name}
             ></img>
           </a>
           <a href="#" className="seeMoreLink">

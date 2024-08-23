@@ -20,8 +20,8 @@ function CategorySideBar({ AlterSideBarStatus }) {
         <button
           className="backButton"
           onClick={() => {
-            setBarStatus(false);
             AlterSideBarStatus();
+            setBarStatus(false);
           }}
         >
           <div className="closeSymbol">&#x2715;</div>

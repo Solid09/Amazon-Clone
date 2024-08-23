@@ -11,7 +11,11 @@ import beautyProducts from "./Assets/BeautyProducts.jpg";
 import productPlaceHolderImg from "./Assets/productsPlaceHolderImg.jpg";
 import "./CSS/MainPage.css";
 
-function MainPage() {
+import _productCardData from './productCardData.json'
+
+function MainPage(props) {
+
+
   const [imgIndex, setImgIndex] = useState(0);
   let bgImages = [kitchenItems, books, toys, gamingItems, beautyProducts];
   const [bgImgCounter, setBgImgCouner] = useState(0);
@@ -70,43 +74,41 @@ function MainPage() {
           display: "grid",
           gridTemplateColumns: "1fr",
           gridTemplateRows: "1fr 1fr",
+          maxWidth:'1500px'
         }}
       >
         <div
           style={{
             display: "flex",
             padding: "0 20px 20px 20px",
+            maxWidth:'1500px'
           }}
         >
           <ProductCard
             cardType="multipleProducts"
             Header="Gaming accessories"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData.slice(0,4)}
             moreProductText="See All"
           />
 
           <ProductCard
             cardType="multipleProducts"
             Header="Shop deals in Fashion"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData.slice(4, 8)}
             moreProductText="See All"
           />
 
           <ProductCard
             cardType="multipleProducts"
             Header="Refresh your space"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData.slice(8, 12)}
             moreProductText="See All"
           />
 
           <ProductCard
             cardType="singleProduct"
             Header="Deals in PCs"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData[12]}
             moreProductText="See All"
             style={{ margin: "0" }}
           />
@@ -116,37 +118,34 @@ function MainPage() {
           style={{
             display: "flex",
             padding: "0 20px 20px 20px",
+            maxWidth:'1500px'
           }}
         >
           <ProductCard
             cardType="singleProduct"
             Header="Toys under $25"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData[13]}
             moreProductText="See All"
           />
 
           <ProductCard
             cardType="multipleProducts"
             Header="Fashion trends you like"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData.slice(14, 18)}
             moreProductText="See All"
           />
 
           <ProductCard
             cardType="singleProduct"
             Header="Beauty steals under $25"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData[18]}
             moreProductText="See All"
           />
 
           <ProductCard
             cardType="singleProduct"
             Header="Home décor under $50"
-            productPlaceHolderImg={productPlaceHolderImg}
-            productImgTextPlaceHolder="Image PH Text"
+            productCardData={_productCardData[19]}
             moreProductText="See All"
             style={{ margin: "0" }}
           />
@@ -169,37 +168,34 @@ function MainPage() {
         style={{
           display: "flex",
           padding: "0 20px 20px 20px",
+          maxWidth:'1500px'
         }}
       >
         <ProductCard
-          cardType="multipleProducts"
-          Header="Gift ideas in Toddler Cups"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          cardType="singleProduct"
+          Header="Upgrade your office furniture"
+          productCardData={_productCardData[20]}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="multipleProducts"
           Header="Gaming merchandise"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData.slice(21, 25)}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="singleProduct"
           Header="Shop activity trackers and smartwatches"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData[25]}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="multipleProducts"
           Header="Warm & welcoming decor"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData.slice(26, 30)}
           moreProductText="See All"
           style={{ margin: "0" }}
         />
@@ -221,37 +217,34 @@ function MainPage() {
         style={{
           display: "flex",
           padding: "0 20px 20px 20px",
+          maxWidth:'1500px'
         }}
       >
         <ProductCard
           cardType="singleProduct"
           Header="Great prices on shoes"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData[30]}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="multipleProducts"
           Header="Level up your gaming"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData.slice(31, 35)}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="multipleProducts"
           Header="Have more fun with family"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData.slice(35, 39)}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="multipleProducts"
           Header="Fantastic Finds for Home"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData.slice(39, 43)}
           moreProductText="See All"
           style={{ margin: "0" }}
         />
@@ -273,37 +266,34 @@ function MainPage() {
         style={{
           display: "flex",
           padding: "0 20px 20px 20px",
+          maxWidth:'1500px'
         }}
       >
         <ProductCard
           cardType="multipleProducts"
           Header="Look your best this season"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData.slice(43, 47)}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="singleProduct"
           Header="Player's paradise starts here"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData[47]}
+          moreProductText="See All"
+        />
+
+        <ProductCard
+          cardType="multipleProducts"
+          Header="Upgrade your office furniture"
+          productCardData={_productCardData.slice(48, 52)}
           moreProductText="See All"
         />
 
         <ProductCard
           cardType="singleProduct"
           Header="A whole new way to work"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
-          moreProductText="See All"
-        />
-
-        <ProductCard
-          cardType="singleProduct"
-          Header="Upgrade your office furniture"
-          productPlaceHolderImg={productPlaceHolderImg}
-          productImgTextPlaceHolder="Image PH Text"
+          productCardData={_productCardData[52]}
           moreProductText="See All"
           style={{ margin: "0" }}
         />

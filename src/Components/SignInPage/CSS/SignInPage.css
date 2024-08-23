@@ -1,0 +1,176 @@
+/* ========= Sign In Page ========= */
+.signInPage,
+.signInPage2ndForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.signInFormBorder {
+  border: 1px solid rgba(128, 128, 128, 0.219);
+  border-radius: 10px;
+}
+.signInFormContainer {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 348px;
+}
+.signIn-emailInput,
+.signIn-passwordInput {
+  width: 100%;
+  height: 31px;
+  border-radius: 3px;
+  padding: 3px 7px;
+  font-size: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  box-sizing: border-box;
+}
+.signIn-emailInput:focus,
+.signIn-passwordInput:focus {
+  box-shadow: none;
+  border: 1px solid rgba(100, 100, 100, 0.384);
+  outline: 2px solid rgba(5, 219, 219, 0.308);
+}
+
+/* ========= Sign In Continue Button ========= */
+.signIn-Continue,
+.signIn-SignIn {
+  font-size: 13px;
+  text-decoration: none;
+  width: 100%;
+  height: 30px;
+  color: black;
+  background-color: rgb(231, 208, 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10px 0 20px 0;
+}
+.signIn-Continue:hover,
+.signIn-SignIn:hover {
+  background-color: rgb(218, 196, 3);
+}
+
+/* ========= Sign In Permissions Texts ========= */
+.signIn-permissionText {
+  font-size: 12px;
+  width: 100%;
+}
+.signIn-permissionText-Links {
+  color: #0066c0;
+}
+.signIn-permissionText-Links:hover {
+  color: rgb(202, 131, 0);
+}
+
+/* ========= Need Help Container ========= */
+.signIn-needHelpContainer {
+  margin: 20px 0;
+}
+.signIn-needHelpContainer button {
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  color: #0066c0;
+  cursor: pointer;
+  text-align: left;
+}
+.signIn-needHelpContainer button:hover {
+  text-decoration: underline;
+  color: rgb(202, 131, 0);
+}
+.signIn-needHelpContainer a,
+.amazonBussinessLink-a,
+.signIn2ndForm-recoverPass,
+.signIn2ndForm-changeEmail,
+.signIn2ndForm-detailsInfo {
+  text-decoration: none;
+  color: #0066c0;
+  font-size: 13px;
+}
+.signIn-needHelpContainer a:hover,
+.amazonBussinessLink-a:hover,
+.signIn2ndForm-recoverPass:hover,
+.signIn2ndForm-changeEmail:hover,
+.signIn2ndForm-detailsInfo:hover {
+  text-decoration: underline;
+  color: rgb(202, 131, 0);
+}
+.signIn-needHelp-arrowRight::before {
+  content: "";
+  position: relative;
+  border: 4px solid transparent;
+  border-top: 4px solid gray;
+  transform: rotate(-90deg);
+  top: -1px;
+  right: 10px;
+  display: inline-block;
+}
+.signIn-needHelp-arrowBottom::before {
+  content: "";
+  position: relative;
+  border: 4px solid transparent;
+  border-top: 4px solid gray;
+  top: 10px;
+  right: 10px;
+}
+
+/* ========= Sign In Menu Divider ========= */
+.signIn-menuDivider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(192, 192, 192, 0.342);
+}
+
+/* ========= Amazon Bussiness Link ========= */
+.amazonBussinessLink {
+  margin-top: 10px;
+}
+
+/* ========= SignIn - Sign Up Link ========= */
+.signIn-signUpLink {
+  width: 348px;
+  text-align: center;
+}
+.signIn-signUpLink-text {
+  color: #767676;
+  font-size: 12px;
+  display: inline-block;
+}
+.signIn-signUpLink-menuDivider {
+  height: 1px;
+  width: 33%;
+  background-color: rgba(128, 128, 128, 0.185);
+}
+.signIn-signUpLink-a {
+  margin: 0 0 30px 0;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.219);
+  height: 31px;
+  font-size: 14px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.219);
+}
+.signIn-signUpLink-a:hover {
+  background-color: rgba(0, 83, 83, 0.04);
+}
+
+/* ========= Sign In Page 2nd Form ========= */
+.signIn2ndForm-detailsInfo::after {
+  content: "";
+  position: relative;
+  border: 4px solid transparent;
+  border-top: 4px solid gray;
+  top: 11px;
+  left: 8px;
+}
