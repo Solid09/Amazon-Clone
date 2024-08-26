@@ -2,8 +2,9 @@ import Header from "./Components/Header/Header.jsx";
 import MainPage from "./Components/MainPage/MainPage.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import BottomOfMainPage from "./Components/BottomOfMainPage/BottomOfMainPage.jsx";
-import SignInPage1stForm from "./Components/SignInPage/SignInPage1stForm.jsx";
-import SignInPage2ndForm from "./Components/SignInPage/SignInPage2ndForm.jsx";
+import SignInPageEmailForm from "./Components/UserAuthentication/SignInPage/SignInPageEmailForm.jsx";
+import SignInPagePassForm from "./Components/UserAuthentication/SignInPage/SignInPagePassForm.jsx";
+import SignUpPage from "./Components/UserAuthentication/SignUpPage/SignUpPage.jsx";
 
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
@@ -12,6 +13,10 @@ function App() {
   const [data, setData] = useState([, []]);
   const productData = useRef(null);
   const [userSignInEmail, setUserSignInEmail] = useState("name@email.com");
+
+  const handleSignInEmail = (value) => {
+    setUserSignInEmail(value);
+  };
 
   //getting product data from json file
   const loadData = async () => {
@@ -92,7 +97,7 @@ function App() {
       </div>
     </div> */
 
-  return <SignInPage2ndForm userEmail={userSignInEmail} />;
+  return <SignUpPage />;
 }
 
 export default App;

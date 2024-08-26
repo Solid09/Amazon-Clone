@@ -1,29 +1,51 @@
 import "./CSS/SignInPage.css";
-import amazonLogo from "./Assets/amazonLogo.jpg";
-import { useState } from "react";
-import SignInPageFoot from "./SignInPageFoot.jsx";
+import { useEffect, useState } from "react";
+import AuthPageFooter from "../AuthPageFooter.jsx";
+import AuthPageMenuDivider from "../AuthPageMenuDivider.jsx";
+import AmazonBussinessLink from "../AmazonBussinessLink.jsx";
+import AuthPageTopLogo from "../AuthPageTopLogo.jsx";
+import AuthPagePermissionText from "../AuthPagePermissionText.jsx";
 
-function SignInPage() {
+import { FaExclamation } from "react-icons/fa";
+
+import { useNavigate } from "react-router-dom";
+
+function SignInPage(props) {
+  //const navigate = useNavigate();
+
   const [needHelpIsActive, setNeedHelpIsActive] = useState(false);
+  const [signInEmail, setSignInEmail] = useState();
+  const [isWrongEmail, setIsWrongEmail] = useState(false);
+
   const handleNeedHelpBtnClick = () => {
     setNeedHelpIsActive((n) => !n);
   };
 
+  const handleContinueBtnClick = (e) => {
+    // checking entered email/phone No
+    const emailValidationKey = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneNoValidationKey = /^\+?92?\d{10,15}$/;
+
+    if (
+      emailValidationKey.test(signInEmail) ||
+      phoneNoValidationKey.test(signInEmail)
+    ) {
+      setIsWrongEmail(false);
+      props.handleSignInEmail(signInEmail);
+      //navigate("#");
+    } else {
+      setIsWrongEmail(true);
+    }
+  };
+
+  useEffect(() => {
+    //setting page name
+    document.title = "Amazon Sign-In";
+  }, []);
+
   return (
     <div className="signInPage">
-      <a href="#">
-        <img
-          src={amazonLogo}
-          alt="amazon logo"
-          style={{
-            width: "108px",
-            height: "35px",
-            objectFit: "cover",
-            padding: "10px 0 0 0",
-            margin: "0 0 10px 0",
-          }}
-        ></img>
-      </a>
+      <AuthPageTopLogo />
       <div className="signInFormBorder">
         <div className="signInFormContainer">
           <h1
@@ -36,7 +58,7 @@ function SignInPage() {
             Sign in
           </h1>
           <label
-            for="signInEmail"
+            htmlFor="signInEmail"
             style={{
               fontSize: "13px",
               fontWeight: "bold",
@@ -50,28 +72,44 @@ function SignInPage() {
           <input
             type="text"
             id="signInEmail"
-            className="signIn-emailInput"
+            className={
+              !isWrongEmail
+                ? "signIn-correctEmailInput"
+                : "signIn-wrongEmailInput"
+            }
+            onChange={(e) => {
+              setSignInEmail(e.target.value);
+            }}
+            required
           ></input>
 
-          <a href="#" className="signIn-Continue">
+          {/*Error message upon entering wrong email/phone No */}
+          {isWrongEmail && (
+            <div style={{ display: "flex", marginTop: "5px" }}>
+              <FaExclamation
+                style={{
+                  margin: "2px 0 0 0",
+                  display: "inline-block",
+                  fontSize: "12px",
+                  color: "red",
+                }}
+              />
+              <span
+                style={{
+                  color: "#C40000",
+                  fontSize: "12px",
+                  margin: "0 0 0 5px",
+                }}
+              >
+                Wrong or Invalid email address or mobile phone number. Please
+                correct and try again.
+              </span>
+            </div>
+          )}
+          <a className="signIn-Continue" onClick={handleContinueBtnClick}>
             <span>Continue</span>
           </a>
-
-          <div className="signIn-permissionText">
-            <span>
-              By continuing, you agree to Amazon's{" "}
-              <a href="#" className="signIn-permissionText-Links">
-                Conditions of
-                <br />
-                Use
-              </a>{" "}
-              and{" "}
-              <a href="#" className="signIn-permissionText-Links">
-                Privacy Notice.
-              </a>
-            </span>
-          </div>
-
+          <AuthPagePermissionText />
           <div className="signIn-needHelpContainer">
             <button
               onClick={handleNeedHelpBtnClick}
@@ -97,18 +135,8 @@ function SignInPage() {
               </>
             )}
           </div>
-
-          <div className="signIn-menuDivider"></div>
-
-          <div className="amazonBussinessLink">
-            <b style={{ fontSize: "13px" }}>
-              Buying for work?
-              <br />
-            </b>
-            <a href="#" className="amazonBussinessLink-a">
-              Shop on Amazon Business
-            </a>
-          </div>
+          <AuthPageMenuDivider />
+          <AmazonBussinessLink />
         </div>
       </div>
 
@@ -131,7 +159,7 @@ function SignInPage() {
         </a>
       </div>
 
-      <SignInPageFoot />
+      <AuthPageFooter />
     </div>
   );
 }

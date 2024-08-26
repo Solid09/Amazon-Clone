@@ -11,11 +11,9 @@ import beautyProducts from "./Assets/BeautyProducts.jpg";
 import productPlaceHolderImg from "./Assets/productsPlaceHolderImg.jpg";
 import "./CSS/MainPage.css";
 
-import _productCardData from './productCardData.json'
+import _productCardData from "./productCardData.json";
 
 function MainPage(props) {
-
-
   const [imgIndex, setImgIndex] = useState(0);
   let bgImages = [kitchenItems, books, toys, gamingItems, beautyProducts];
   const [bgImgCounter, setBgImgCouner] = useState(0);
@@ -43,6 +41,10 @@ function MainPage(props) {
       clearTimeout(timer);
     };
   }, [imgIndex]);
+
+  useEffect(() => {
+    document.title = "Amazon.com. Spend less. Smile more";
+  }, []);
 
   return (
     <>
@@ -74,20 +76,20 @@ function MainPage(props) {
           display: "grid",
           gridTemplateColumns: "1fr",
           gridTemplateRows: "1fr 1fr",
-          maxWidth:'1500px'
+          maxWidth: "1500px",
         }}
       >
         <div
           style={{
             display: "flex",
             padding: "0 20px 20px 20px",
-            maxWidth:'1500px'
+            maxWidth: "1500px",
           }}
         >
           <ProductCard
             cardType="multipleProducts"
             Header="Gaming accessories"
-            productCardData={_productCardData.slice(0,4)}
+            productCardData={_productCardData.slice(0, 4)}
             moreProductText="See All"
           />
 
@@ -118,7 +120,7 @@ function MainPage(props) {
           style={{
             display: "flex",
             padding: "0 20px 20px 20px",
-            maxWidth:'1500px'
+            maxWidth: "1500px",
           }}
         >
           <ProductCard
@@ -168,7 +170,7 @@ function MainPage(props) {
         style={{
           display: "flex",
           padding: "0 20px 20px 20px",
-          maxWidth:'1500px'
+          maxWidth: "1500px",
         }}
       >
         <ProductCard
@@ -217,7 +219,7 @@ function MainPage(props) {
         style={{
           display: "flex",
           padding: "0 20px 20px 20px",
-          maxWidth:'1500px'
+          maxWidth: "1500px",
         }}
       >
         <ProductCard
@@ -266,7 +268,7 @@ function MainPage(props) {
         style={{
           display: "flex",
           padding: "0 20px 20px 20px",
-          maxWidth:'1500px'
+          maxWidth: "1500px",
         }}
       >
         <ProductCard

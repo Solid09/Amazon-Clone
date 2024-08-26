@@ -1,8 +1,8 @@
-import "./CSS/SignInPageFoot.css";
+import "./CSS/AuthPageFooter.css";
 
-function SignInPageFoot() {
+function AuthPageFooter(props) {
   return (
-    <div className="signInPage-foot">
+    <div className="signInPage-foot" style={props.style}>
       <div className="signInPage-foot-divider"></div>
       <div className="signInPage-foot-usefullLinks">
         <a href="#" style={{ margin: "0 20px 0 0" }}>
@@ -22,4 +22,4 @@ function SignInPageFoot() {
   );
 }
 
-export default SignInPageFoot;
+export default AuthPageFooter;
