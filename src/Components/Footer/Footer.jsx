@@ -6,7 +6,7 @@ import "./CSS/Footer.css";
 
 function Footer() {
   return (
-    <>
+    <div className="footer">
       <a href="#" className="backToTop">
         Back to top
       </a>
@@ -28,7 +28,7 @@ function Footer() {
         </div>
         <span className="copyrigthText">&#169; 1996-2024, Amazon.com, Inc. or its affiliates</span>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -31,7 +31,7 @@ function Header() {
   }, [sideBarStatus]);
 
   return (
-    <div className="container">
+    <div style={{ maxHeight: "99px" }}>
       {sideBarStatus && (
         <div>
           <CategorySideBar AlterSideBarStatus={ChangeSideBarStatus} />

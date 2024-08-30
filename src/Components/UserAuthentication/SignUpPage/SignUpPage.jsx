@@ -118,6 +118,7 @@ function SignUpPage() {
               setFullName(e.target.value);
               verifyName();
             }}
+            required
           ></input>
           {isNameFieldEmpty && (
             <>
@@ -166,6 +167,7 @@ function SignUpPage() {
               setSignInEmail(e.target.value);
               verifyEmail();
             }}
+            required
           ></input>
           {/*Error message upon entering wrong email/phone No */}
           {isWrongEmail && (
@@ -217,6 +219,7 @@ function SignUpPage() {
               setPass(e.target.value);
               verifyPass();
             }}
+            required
           ></input>
           {!isCompletePass && (
             <div style={{ display: "flex", marginTop: "5px" }}>
@@ -263,6 +266,7 @@ function SignUpPage() {
               setReEnterPass(e.target.value);
               verifyPass();
             }}
+            required
           ></input>
           {isReEnterPassEmpty && !isPassEmpty && (
             <div style={{ display: "flex", marginTop: "5px" }}>

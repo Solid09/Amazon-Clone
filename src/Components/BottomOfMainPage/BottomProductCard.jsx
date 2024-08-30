@@ -46,7 +46,7 @@ function BottomProductCard(props) {
 
       {props.shippingPrice && (
         <a href="#" className="productShippingPrice">
-          <span>&#36;{props.shippingPrice}</span>
+          <span style={{fontSize:'12px'}}>&#36;{props.shippingPrice} shipping</span>
         </a>
       )}
     </div>
