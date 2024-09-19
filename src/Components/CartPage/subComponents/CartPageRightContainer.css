@@ -84,6 +84,8 @@
   font-size: 11px;
   border-radius: 20px;
   background-color: rgb(243, 217, 67);
+  border: none;
+  cursor: pointer;
 }
 .rightSideBar_productSuggestions-ulAddToCartBtn:hover {
   background-color: rgb(219, 196, 61);

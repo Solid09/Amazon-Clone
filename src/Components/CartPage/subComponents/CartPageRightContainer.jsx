@@ -5,6 +5,16 @@ import prime_logo from "../Assets/amazon_prime_logo.svg";
 import product_placeholder_img from "../Assets/productsPlaceHolderImg.jpg";
 
 function CartPageRightContainer(props) {
+  const addProductToCart = () => {  //for now placeholder data. else just access the data from the db of the clicked product and pass
+    const item = {
+      id: props.cartItems.length + 1,
+      name: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae at voluptas repudiandae aperiam, cumque",
+      amountBought: 1000,
+      isInStock: true,
+      price: "$9.99",
+    };
+    props.addItemsToCart(item);
+  };
 
   return (
     <div className="rightSideBar">
@@ -122,12 +132,12 @@ function CartPageRightContainer(props) {
                       $9.99
                       <br />
                     </span>
-                    <a
-                      href="#"
+                    <button
                       className="rightSideBar_productSuggestions-ulAddToCartBtn"
+                      onClick={()=>addProductToCart()}
                     >
                       Add to cart
-                    </a>
+                    </button>
                   </div>
                 </div>
               </li>
