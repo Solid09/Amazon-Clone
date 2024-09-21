@@ -8,10 +8,10 @@ import AuthPagePermissionText from "../AuthPagePermissionText.jsx";
 
 import { FaExclamation } from "react-icons/fa";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignInPage(props) {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [needHelpIsActive, setNeedHelpIsActive] = useState(false);
   const [signInEmail, setSignInEmail] = useState();
@@ -32,7 +32,7 @@ function SignInPage(props) {
     ) {
       setIsWrongEmail(false);
       props.handleSignInEmail(signInEmail);
-      //navigate("#");
+      navigate("/signin-pass", { replace: true });
     } else {
       setIsWrongEmail(true);
     }
@@ -106,9 +106,14 @@ function SignInPage(props) {
               </span>
             </div>
           )}
-          <a className="signIn-Continue" onClick={handleContinueBtnClick}>
+
+          <button
+            className="signIn-Continue"
+            onClick={handleContinueBtnClick}
+          >
             <span>Continue</span>
-          </a>
+          </button>
+
           <AuthPagePermissionText />
           <div className="signIn-needHelpContainer">
             <button
@@ -154,9 +159,9 @@ function SignInPage(props) {
           <div className="signIn-signUpLink-menuDivider"></div>
         </div>
         <br />
-        <a href="#" className="signIn-signUpLink-a">
+        <Link to="/signup" className="signIn-signUpLink-a">
           <span>Create your Amazon account</span>
-        </a>
+        </Link>
       </div>
 
       <AuthPageFooter />

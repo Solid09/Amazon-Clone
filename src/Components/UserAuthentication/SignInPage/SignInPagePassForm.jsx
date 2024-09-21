@@ -3,7 +3,23 @@ import { useState, useEffect } from "react";
 import AuthPageFooter from "../AuthPageFooter";
 import AuthPageTopLogo from "../AuthPageTopLogo";
 
+import { Link, useNavigate } from "react-router-dom";
+import { FaExclamation } from "react-icons/fa";
+
 function SignInPagePass(props) {
+  const navigate = useNavigate();
+  const [signInPass, setSignInPass] = useState("");
+  const [passFieldIsEmpty, setPassFieldIsEmpty] = useState(false);
+
+  const handleSignInBtnClick = () => {
+    if (signInPass.length === 0) {
+      setPassFieldIsEmpty(true);
+    } else {
+      setPassFieldIsEmpty(false);
+      navigate("/");
+    }
+  };
+
   useEffect(() => {
     document.title = "Amazon Sign-In";
   }, []);
@@ -34,9 +50,9 @@ function SignInPagePass(props) {
             <span style={{ fontSize: "13px", margin: "0 5px 0 0" }}>
               {props.userEmail}
             </span>
-            <a href="#" className="signInPass-changeEmail">
+            <Link to="/signin-email" className="signInPass-changeEmail">
               Change
-            </a>
+            </Link>
           </div>
           <div
             style={{
@@ -65,16 +81,38 @@ function SignInPagePass(props) {
           <input
             type="password"
             id="signInPassword"
-            className="signIn-passwordInput"
+            className={passFieldIsEmpty ? "signIn-wrongPasswordInput" : "signIn-passwordInput"}
+            onChange={(e) => {
+              setSignInPass(e.target.value);
+            }}
           ></input>
 
-          <a
-            href="#"
+          {
+            //error on entering null password
+            passFieldIsEmpty && (
+              <div style={{display:'flex', marginTop:'5px'}}>
+                <FaExclamation
+                  style={{
+                    margin: "2px 0 0 0",
+                    display: "inline-block",
+                    fontSize: "12px",
+                    color: "red",
+                  }}
+                />
+                <span className="signIn-emptyPassErrorText">
+                  Enter your password
+                </span>
+              </div>
+            )
+          }
+
+          <button
             className="signIn-SignIn"
             style={{ margin: "20px 0 20px 0" }}
+            onClick={handleSignInBtnClick}
           >
             <span>Sign in</span>
-          </a>
+          </button>
 
           <div
             style={{

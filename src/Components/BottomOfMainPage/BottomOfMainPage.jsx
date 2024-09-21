@@ -2,7 +2,8 @@ import BottomProductCard from "./BottomProductCard";
 import "./CSS/BottomOfMainPage.css";
 
 import productPlaceHolderImg from "./Assets/productsPlaceHolderImg.jpg";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function BottomOfMainPage() {
   const [isOverflowing, setIsOverflowing] = useState(false);
@@ -60,9 +61,9 @@ function BottomOfMainPage() {
             <h2 className="container-header">
               Gift ideas inspired by your shopping history
             </h2>
-            <a href="#" className="container-seeMoreLink">
+            <Link to="#" className="container-seeMoreLink">
               Show more
-            </a>
+            </Link>
           </div>
 
           <div
@@ -275,14 +276,14 @@ function BottomOfMainPage() {
           <span style={{ display: "block", fontSize: "13px" }}>
             See personalized recommendations
           </span>
-          <a href="#" className="signInLink">
+          <Link to="signin-email" className="signInLink">
             <b>Sign in</b>
-          </a>
+          </Link>
           <div style={{ marginBottom: "20px" }}>
             <span style={{ fontSize: "11px" }}>New customer?</span>
-            <a href="#" className="signUpLink">
+            <Link to="/signup" className="signUpLink">
               Start here
-            </a>
+            </Link>
           </div>
         </div>
       </div>

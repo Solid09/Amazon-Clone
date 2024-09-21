@@ -1,8 +1,10 @@
 import amazonLogo from './Assets/amazonlogo.jpg'
 
+import { Link } from 'react-router-dom';
+
 function AuthPageTopLogo() {
   return (
-    <a href="#">
+    <Link to="/">
       <img
         src={amazonLogo}
         alt="amazon logo"
@@ -14,7 +16,7 @@ function AuthPageTopLogo() {
           margin: "0 0 10px 0",
         }}
       ></img>
-    </a>
+    </Link>
   );
 }
 

@@ -72,6 +72,8 @@
   align-items: center;
   border-radius: 10px;
   margin: 15px 0 20px 0;
+  cursor: pointer;
+  border: none;
 }
 .signUp-Continue:hover {
   background-color: rgb(218, 196, 3);

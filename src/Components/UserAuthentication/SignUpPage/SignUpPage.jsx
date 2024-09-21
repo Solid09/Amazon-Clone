@@ -6,10 +6,12 @@ import AmazonBussinessLink from "../AmazonBussinessLink.jsx";
 import AuthPageFooter from "../AuthPageFooter.jsx";
 
 import { useEffect, useState } from "react";
-import { FaInfoCircle } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { FaExclamation } from "react-icons/fa";
 
 function SignUpPage() {
+  const navigate = useNavigate();
+
   const [isWrongEmail, setIsWrongEmail] = useState(false);
   const [signInEmail, setSignInEmail] = useState("");
   const [passIsSame, setPassIsSame] = useState(true);
@@ -22,10 +24,23 @@ function SignUpPage() {
   const [isCompletePass, setIsCompletePass] = useState(true);
 
   const handleVerfiyEmailBtnClick = () => {
-    verifyEmail();
-    verifyName();
-    verifyPass();
-    console.log(pass.length);
+    let verifiedName = false,
+      verifiedEmail = false,
+      verifiedPass = false;
+      
+    if (verifyName()) {
+      verifiedName = true;
+    }
+    if (verifyEmail()) {
+      verifiedEmail = true;
+    }
+    if (verifyPass()) {
+      verifiedPass = true;
+    }
+
+    if (verifiedName && verifiedEmail && verifiedPass) {
+      navigate("/");
+    }
   };
 
   const verifyName = () => {
@@ -33,6 +48,7 @@ function SignUpPage() {
       setIsNameFieldEmpty(true);
     } else {
       setIsNameFieldEmpty(false);
+      return true;
     }
   };
 
@@ -46,18 +62,30 @@ function SignUpPage() {
       phoneNoValidationKey.test(signInEmail)
     ) {
       setIsWrongEmail(false);
-      //navigate("#");
+      return true;
     } else {
       setIsWrongEmail(true);
     }
   };
 
   const verifyPass = () => {
-    if (pass === reEnterPass) {
-      setPassIsSame(true);
-    } else {
-      setPassIsSame(false);
-    }
+    const checkIfPassSame = () => {
+      if (pass === reEnterPass) {
+        setPassIsSame(true);
+        return true;
+      } else {
+        setPassIsSame(false);
+      }
+    };
+    const checkPassLength = () => {
+      if (pass.length < 6) {
+        setIsCompletePass(false);
+      } else {
+        setIsCompletePass(true);
+        return true;
+      }
+    };
+
     if (pass.length === 0) {
       setIsPassEmpty(true);
     } else {
@@ -68,10 +96,11 @@ function SignUpPage() {
     } else {
       setIsReEnterPassEmpty(false);
     }
-    if (pass.length < 6) {
-      setIsCompletePass(false);
+
+    if (checkIfPassSame() && checkPassLength()) {
+      return true;
     } else {
-      setIsCompletePass(true);
+      return false;
     }
   };
 
@@ -311,14 +340,14 @@ function SignUpPage() {
             </div>
           )}
 
-          <a
+          <button
             className="signUp-Continue"
             onClick={() => {
               handleVerfiyEmailBtnClick();
             }}
           >
             <span>Verify Email</span>
-          </a>
+          </button>
 
           <AuthPagePermissionText />
 
@@ -338,9 +367,9 @@ function SignUpPage() {
 
           <div>
             <span style={{ fontSize: "13px" }}>Already have an account?</span>
-            <a href="#" className="signUpPage-signInLink">
+            <Link to="/signin-email" className="signUpPage-signInLink">
               Sign in
-            </a>
+            </Link>
           </div>
         </div>
       </div>

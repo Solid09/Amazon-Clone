@@ -3,13 +3,15 @@ import "./CSS/Navbar.css";
 import logo from "./Assets/amazonLogo.jpeg";
 import usFlag from "./Assets/UnitedStatesFlag.png";
 
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <>
       <div className="leftBarContainer">
-        <a href="#">
+        <Link to="/">
           <img src={logo} alt="amazon logo" className="amazonLogo" />
-        </a>
+        </Link>
         <button className="deliveryButton">
           <span className="deliveryText"> Deliver to</span>
           <span className="delveryCountryText"> Pakistan </span>
@@ -27,13 +29,13 @@ function Navbar() {
             <b>EN</b>
           </span>
         </button>
-        <button className="authButton">
+        <Link className="authButton" to="/signin-email">
           <p>
             Hello, sign in
             <br />
             <b style={{ fontSize: '0.875rem' }}>Account &amp; Lists</b>
           </p>
-        </button>
+        </Link>
         <div className="returnsAndOrdersText">
           <p>
             Returns
@@ -41,9 +43,9 @@ function Navbar() {
             <b style={{ fontSize: "0.875rem"}}>&amp; Orders</b>
           </p>
         </div>
-        <div className="cart">
+        <Link className="cart" to="/cart">
           <p>Cart</p>
-        </div>
+        </Link>
       </div>
     </>
   );

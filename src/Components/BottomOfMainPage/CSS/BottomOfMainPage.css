@@ -96,6 +96,9 @@
    margin-left: 5px;
    color: #007185;
 }
+.signUpLink:hover{
+   color: orange;
+}
 
 /* ========= Misc. ========= */
 .container-header{
