@@ -12,7 +12,7 @@ function UnorderedProductsList(props) {
 
   return (
     <div className="unorderedListContainer">
-      <h2 style={{ margin: "0", padding: "0" }}>{props.header}</h2>
+      <h2 style={{ margin: "0", padding: "0", fontSize:'21px' }}>{props.header}</h2>
       <ul
         className="unorderedList"
         onMouseEnter={handleOnHover}

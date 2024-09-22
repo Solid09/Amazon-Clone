@@ -5,25 +5,25 @@ function ProductCardList(props) {
     if (props.cardType == "multipleProducts") {
       return (
         <div className="multipleProducts" style={props.style}>
-          <h2>{props.Header}</h2>
+          <h2 style={{margin:'0 0 10px 0', fontSize:'21px'}}>{props.Header}</h2>
           <div
             style={{
               display: "grid",
               gridTemplateColumns: `repeat(2, 1fr)`,
               gridTemplateRows: `repeat(2, 1fr)`,
-              padding: "10px 0 20px 0",
+              padding: "0 0 20px 0",
               gap: "15px",
             }}
           >
             {Array(4)
               .fill()
               .map((_, index) => (
-                <a key={index} href="#">
+                <a key={index} href="#" className="productPageLinkImg">
                   <img
                     src={props.productCardData[index].img}
                     alt={props.productCardData[index].name}
                     style={{
-                      width: "132px",
+                      width: "100%",
                       objectFit: "cover",
                       height: "115px",   
                     }}
@@ -32,7 +32,7 @@ function ProductCardList(props) {
                 </a>
               ))}
           </div>
-          <a href="#" className="seeMoreLink">
+          <a href="#" className="mainPage-productCard-seeMoreLink">
             {props.moreProductText}
           </a>
         </div>
@@ -40,19 +40,20 @@ function ProductCardList(props) {
     } else if (props.cardType == "singleProduct") {
       return (
         <div className="singleProduct" style={props.style}>
-          <h2>{props.Header}</h2>
-          <a href="#">
+          <h2 style={{margin:'0 0 10px 0', fontSize:'21px'}}>{props.Header}</h2>
+          <a href="#" className="productPageLinkImg">
             <img
               src={props.productCardData.img}
               style={{
-                height: "300px",
+                height: "auto",
                 width: "100%",
                 objectFit: "cover",
+                flex:'1',
               }}
               alt={props.productCardData.name}
             ></img>
           </a>
-          <a href="#" className="seeMoreLink">
+          <a href="#" className="mainPage-productCard-seeMoreLink">
             {props.moreProductText}
           </a>
         </div>

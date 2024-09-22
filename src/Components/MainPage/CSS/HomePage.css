@@ -2,26 +2,71 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1500px;
   position: relative;
   margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
 }
 
+.bgImgContainer {
+  width: 100%;
+  height: 250px;
+}
+
+.mainPage-topTwoProductCardsListGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+}
+.mainPage-topTwoProductCardsListGrid-extraCard {
+  display: none;
+}
+
+@media (max-width: 1240px) {
+  .mainPage-topTwoProductCardsListGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 20px 20px 20px;
+    gap: 20px;
+  }
+  .mainPage-topTwoProductCardsListGrid-extraCard {
+    display: block;
+  }
+  .mainPage-ProductCardsListGrid-extraCard {
+    display: none;
+  }
+  .mainPage-singleRowProductCardsList{
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+.mainPage-singleRowProductCardsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 0 20px 20px 20px;
+  max-width: 1500px;
+  gap: 20px;
+}
 /* ========= BackGround Image ========= */
 .bgImg {
   width: 1500px;
   position: relative;
 }
-.bgImgGradient{
+
+.bgImgGradient {
   position: absolute;
   width: 100%;
   height: 350px;
   left: 50%;
   transform: translateX(-50%);
   top: 100%;
-  background-image: linear-gradient(to top, #E3E6E6, transparent);
+  background-image: linear-gradient(to top, #e3e6e6, transparent);
   z-index: -1;
 }
+
 .bgImg_img {
   width: 100%;
   height: 600px;
@@ -32,11 +77,17 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.bgImg_btns {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
 .imgForwardBtn,
 .imgBackBtn {
   border: transparent;
   width: 84px;
-  height: 250px;
+  height: 100%;
   background-color: transparent;
   cursor: pointer;
   position: relative;

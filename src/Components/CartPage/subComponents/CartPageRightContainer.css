@@ -4,6 +4,7 @@
   flex-direction: column;
   flex: 0.2;
   gap: 20px;
+  min-width: 300px;
 }
 
 /*===== Card Details Box =====*/

@@ -2,33 +2,34 @@
 .multipleProducts {
   background-color: white;
   padding: 20px 20px 15px;
-  margin-right: 20px;
   flex: 1 1 25%;
 }
 .singleProduct {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 20px 20px 15px;
-  margin-right: 20px;
   flex: 1 1 25%;
 }
-.multipleProducts a {
+.productPageLinkImg{
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  flex: 1;
 }
-.multipleProducts a span {
+.productPageLinkImg span {
   font-size: 12px;
   color: #0f1111;
 }
 
 /* ========= Misc. ========= */
-.seeMoreLink {
+.mainPage-productCard-seeMoreLink {
   font-size: 13px;
   color: #007185;
   text-decoration: none;
   margin: 20px 0 0 0 !important;
   display: flex;
 }
-.seeMoreLink:hover {
+.mainPage-productCard-seeMoreLink:hover {
   color: rgb(255, 166, 0);
 }

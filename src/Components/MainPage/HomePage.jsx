@@ -51,11 +51,11 @@ function MainPage(props) {
   }, []);
 
   return (
-    <div style={{ display: "block", height: "100vh" }}>
+    <div style={{ display: "block", height: "100vh", width: "100%" }}>
       <Header />
       <BackGroundTheme />
       <div className="mainPage">
-        <div className="bgImg" style={{ width: "1500px" }}>
+        <div className="bgImgContainer">
           <div className="bgImgGradient"></div>
           <img
             src={bgImages[imgIndex]}
@@ -63,13 +63,7 @@ function MainPage(props) {
             className="bgImg_img"
           ></img>
 
-          <div
-            className="bgImg_btns"
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="bgImg_btns">
             <button
               className="imgForwardBtn"
               onClick={handleForwardClick}
@@ -78,85 +72,71 @@ function MainPage(props) {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gridTemplateRows: "1fr 1fr",
-            maxWidth: "1500px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              padding: "0 20px 20px 20px",
-              maxWidth: "1500px",
-            }}
-          >
+        <div className="mainPage-topTwoProductCardsListGrid">
+          <ProductCard
+            cardType="multipleProducts"
+            Header="Gaming accessories"
+            productCardData={_productCardData.slice(0, 4)}
+            moreProductText="See All"
+          />
+
+          <ProductCard
+            cardType="multipleProducts"
+            Header="Shop deals in Fashion"
+            productCardData={_productCardData.slice(4, 8)}
+            moreProductText="See All"
+          />
+
+          <ProductCard
+            cardType="multipleProducts"
+            Header="Refresh your space"
+            productCardData={_productCardData.slice(8, 12)}
+            moreProductText="See All"
+          />
+
+          <ProductCard
+            cardType="singleProduct"
+            Header="Deals in PCs"
+            productCardData={_productCardData[12]}
+            moreProductText="See All"
+            style={{ margin: "0" }}
+          />
+          <ProductCard
+            cardType="singleProduct"
+            Header="Toys under $25"
+            productCardData={_productCardData[13]}
+            moreProductText="See All"
+          />
+
+          <ProductCard
+            cardType="multipleProducts"
+            Header="Fashion trends you like"
+            productCardData={_productCardData.slice(14, 18)}
+            moreProductText="See All"
+          />
+
+          <ProductCard
+            cardType="singleProduct"
+            Header="Beauty steals under $25"
+            productCardData={_productCardData[18]}
+            moreProductText="See All"
+          />
+
+          <ProductCard
+            cardType="singleProduct"
+            Header="Home décor under $50"
+            productCardData={_productCardData[19]}
+            moreProductText="See All"
+            style={{ margin: "0" }}
+          />
+          <div className="mainPage-topTwoProductCardsListGrid-extraCard">
             <ProductCard
               cardType="multipleProducts"
-              Header="Gaming accessories"
-              productCardData={_productCardData.slice(0, 4)}
-              moreProductText="See All"
-            />
-
-            <ProductCard
-              cardType="multipleProducts"
-              Header="Shop deals in Fashion"
-              productCardData={_productCardData.slice(4, 8)}
-              moreProductText="See All"
-            />
-
-            <ProductCard
-              cardType="multipleProducts"
-              Header="Refresh your space"
-              productCardData={_productCardData.slice(8, 12)}
-              moreProductText="See All"
-            />
-
-            <ProductCard
-              cardType="singleProduct"
-              Header="Deals in PCs"
-              productCardData={_productCardData[12]}
+              Header="Warm & welcoming decor"
+              productCardData={_productCardData.slice(26, 30)}
               moreProductText="See All"
               style={{ margin: "0" }}
-            />
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              padding: "0 20px 20px 20px",
-              maxWidth: "1500px",
-            }}
-          >
-            <ProductCard
-              cardType="singleProduct"
-              Header="Toys under $25"
-              productCardData={_productCardData[13]}
-              moreProductText="See All"
-            />
-
-            <ProductCard
-              cardType="multipleProducts"
-              Header="Fashion trends you like"
-              productCardData={_productCardData.slice(14, 18)}
-              moreProductText="See All"
-            />
-
-            <ProductCard
-              cardType="singleProduct"
-              Header="Beauty steals under $25"
-              productCardData={_productCardData[18]}
-              moreProductText="See All"
-            />
-
-            <ProductCard
-              cardType="singleProduct"
-              Header="Home décor under $50"
-              productCardData={_productCardData[19]}
-              moreProductText="See All"
-              style={{ margin: "0" }}
+              className=""
             />
           </div>
         </div>
@@ -173,13 +153,7 @@ function MainPage(props) {
           placeHolderImg={productPlaceHolderImg}
         />
 
-        <div
-          style={{
-            display: "flex",
-            padding: "0 20px 20px 20px",
-            maxWidth: "1500px",
-          }}
-        >
+        <div className="mainPage-singleRowProductCardsList">
           <ProductCard
             cardType="singleProduct"
             Header="Upgrade your office furniture"
@@ -201,13 +175,15 @@ function MainPage(props) {
             moreProductText="See All"
           />
 
-          <ProductCard
-            cardType="multipleProducts"
-            Header="Warm & welcoming decor"
-            productCardData={_productCardData.slice(26, 30)}
-            moreProductText="See All"
-            style={{ margin: "0" }}
-          />
+          <div className="mainPage-ProductCardsListGrid-extraCard">
+            <ProductCard
+              cardType="multipleProducts"
+              Header="Warm & welcoming decor"
+              productCardData={_productCardData.slice(26, 30)}
+              moreProductText="See All"
+              style={{ margin: "0" }}
+            />
+          </div>
         </div>
 
         <UnorderedProductsList
@@ -222,13 +198,7 @@ function MainPage(props) {
           placeHolderImg={productPlaceHolderImg}
         />
 
-        <div
-          style={{
-            display: "flex",
-            padding: "0 20px 20px 20px",
-            maxWidth: "1500px",
-          }}
-        >
+        <div className="mainPage-singleRowProductCardsList">
           <ProductCard
             cardType="singleProduct"
             Header="Great prices on shoes"
@@ -249,14 +219,15 @@ function MainPage(props) {
             productCardData={_productCardData.slice(35, 39)}
             moreProductText="See All"
           />
-
-          <ProductCard
-            cardType="multipleProducts"
-            Header="Fantastic Finds for Home"
-            productCardData={_productCardData.slice(39, 43)}
-            moreProductText="See All"
-            style={{ margin: "0" }}
-          />
+          <div className="mainPage-ProductCardsListGrid-extraCard">
+            <ProductCard
+              cardType="multipleProducts"
+              Header="Fantastic Finds for Home"
+              productCardData={_productCardData.slice(39, 43)}
+              moreProductText="See All"
+              style={{ margin: "0" }}
+            />
+          </div>
         </div>
 
         <UnorderedProductsList
@@ -271,13 +242,7 @@ function MainPage(props) {
           placeHolderImg={productPlaceHolderImg}
         />
 
-        <div
-          style={{
-            display: "flex",
-            padding: "0 20px 20px 20px",
-            maxWidth: "1500px",
-          }}
-        >
+        <div className="mainPage-singleRowProductCardsList">
           <ProductCard
             cardType="multipleProducts"
             Header="Look your best this season"
@@ -291,14 +256,14 @@ function MainPage(props) {
             productCardData={_productCardData[47]}
             moreProductText="See All"
           />
-
-          <ProductCard
-            cardType="multipleProducts"
-            Header="Upgrade your office furniture"
-            productCardData={_productCardData.slice(48, 52)}
-            moreProductText="See All"
-          />
-
+          <div className="mainPage-ProductCardsListGrid-extraCard">
+            <ProductCard
+              cardType="multipleProducts"
+              Header="Upgrade your office furniture"
+              productCardData={_productCardData.slice(48, 52)}
+              moreProductText="See All"
+            />
+          </div>
           <ProductCard
             cardType="singleProduct"
             Header="A whole new way to work"
