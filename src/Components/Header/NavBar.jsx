@@ -1,4 +1,4 @@
-import "./CSS/Navbar.css";
+import "./CSS/NavBar.css";
 
 import logo from "./Assets/amazonLogo.jpeg";
 import usFlag from "./Assets/UnitedStatesFlag.png";
