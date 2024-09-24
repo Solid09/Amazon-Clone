@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import UnorderedProductsList from "./UnorderedProductsList.jsx";
 import ProductCard from "./ProductCard.jsx";
 
-import kitchenItems from "./Assets/kitchenFav.jpg";
+import kitchenItems from "./Assets/KitchenFav.jpg";
 import books from "./Assets/Books.jpg";
 import toys from "./Assets/Toys.jpg";
 import gamingItems from "./Assets/GamingItems.jpg";
