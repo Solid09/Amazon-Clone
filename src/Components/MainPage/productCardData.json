@@ -1,214 +1,214 @@
 [
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/HeadsetCategory.jpg",
+    "img": "/PlaceholderProductImages/HeadsetCategory.jpg",
     "name": "Headset"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/KeyboardCategory.jpg",
+    "img": "/PlaceholderProductImages/KeyboardCategory.jpg",
     "name": "Keyboard"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/MouseCategory.jpg",
+    "img": "/PlaceholderProductImages/MouseCategory.jpg",
     "name": "Compute Mice"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/GamingChair.jpg",
+    "img": "/PlaceholderProductImages/GamingChair.jpg",
     "name": "Gaming Chair"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/JeansUnder50.jpg",
+    "img": "/PlaceholderProductImages/JeansUnder50.jpg",
     "name": "Jeans Under $50"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/TopUnder25.jpg",
+    "img": "/PlaceholderProductImages/TopUnder25.jpg",
     "name": "Tops Under $25"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/DressesUnder30.jpg",
+    "img": "/PlaceholderProductImages/DressesUnder30.jpg",
     "name": "Dresses Under $30"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ShoesUnder50.jpg",
+    "img": "/PlaceholderProductImages/ShoesUnder50.jpg",
     "name": "Shoes Under $50"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Dining.jpg",
+    "img": "/PlaceholderProductImages/Dining.jpg",
     "name": "Dining"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Home.jpg",
+    "img": "/PlaceholderProductImages/Home.jpg",
     "name": "Home"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Kitchen.jpg",
+    "img": "/PlaceholderProductImages/Kitchen.jpg",
     "name": "Kitchen"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/HealthAndBeauty.jpg",
+    "img": "/PlaceholderProductImages/HealthAndBeauty.jpg",
     "name": "Health & Beauty"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/GamingPc.jpg",
+    "img": "/PlaceholderProductImages/GamingPc.jpg",
     "name": "Gaming PC"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ToysUnder25.jpg",
+    "img": "/PlaceholderProductImages/ToysUnder25.jpg",
     "name": "Toys Under $25"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Dresses_fashion.jpg",
+    "img": "/PlaceholderProductImages/Dresses_fashion.jpg",
     "name": "Dresses"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Knits_fashion.jpg",
+    "img": "/PlaceholderProductImages/Knits_fashion.jpg",
     "name": "Knits"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Jackets_fashion.jpg",
+    "img": "/PlaceholderProductImages/Jackets_fashion.jpg",
     "name": "Jackets"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Jewlery_fashion.jpg",
+    "img": "/PlaceholderProductImages/Jewlery_fashion.jpg",
     "name": "Jewlery"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/BeautyUnder25.jpg",
+    "img": "/PlaceholderProductImages/BeautyUnder25.jpg",
     "name": "Beauty Steals Under $25"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/HomeDecorUnder50.jpg",
+    "img": "/PlaceholderProductImages/HomeDecorUnder50.jpg",
     "name": "Home Decor Under $50"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/OfficeFurniture.jpg",
+    "img": "/PlaceholderProductImages/OfficeFurniture.jpg",
     "name": "Office Furniture"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Apparael_gamingMerc.jpg",
+    "img": "/PlaceholderProductImages/Apparael_gamingMerc.jpg",
     "name": "Apparael"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Hats_gamingMerc.jpg",
+    "img": "/PlaceholderProductImages/Hats_gamingMerc.jpg",
     "name": "Hats"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ActionFigures_gamingMerc.jpg",
+    "img": "/PlaceholderProductImages/ActionFigures_gamingMerc.jpg",
     "name": "Action Figures"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Mugs_gamingMerc.jpg",
+    "img": "/PlaceholderProductImages/Mugs_gamingMerc.jpg",
     "name": "Mugs"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Watches.jpg",
+    "img": "/PlaceholderProductImages/Watches.jpg",
     "name": "Watches"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/WreathsAndGarlands.jpg",
+    "img": "/PlaceholderProductImages/WreathsAndGarlands.jpg",
     "name": "Wreaths & Garlands"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/OutdoorDecor.jpg",
+    "img": "/PlaceholderProductImages/OutdoorDecor.jpg",
     "name": "Outdoor Decor"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/PillowsAndThrows.jpg",
+    "img": "/PlaceholderProductImages/PillowsAndThrows.jpg",
     "name": "Pillows & Throws"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/WallartAndMirrors.jpg",
+    "img": "/PlaceholderProductImages/WallartAndMirrors.jpg",
     "name": "Wall Art & Mirrors"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Shoes_singleProduct.jpg",
+    "img": "/PlaceholderProductImages/Shoes_singleProduct.jpg",
     "name": "Shoes"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/PCGaming.jpg",
+    "img": "/PlaceholderProductImages/PCGaming.jpg",
     "name": "PC Gaming"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Xbox.jpg",
+    "img": "/PlaceholderProductImages/Xbox.jpg",
     "name": "Xbox"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/PlayStation.jpg",
+    "img": "/PlaceholderProductImages/PlayStation.jpg",
     "name": "PlayStation"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/NintendoSwitch.jpg",
+    "img": "/PlaceholderProductImages/NintendoSwitch.jpg",
     "name": "Nintendo Switch"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/OutdoorPlaySets.jpg",
+    "img": "/PlaceholderProductImages/OutdoorPlaySets.jpg",
     "name": "Outdoor Playsets"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/LearningToys.jpg",
+    "img": "/PlaceholderProductImages/LearningToys.jpg",
     "name": "Learning Toys"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ActionFigures_toys.jpg",
+    "img": "/PlaceholderProductImages/ActionFigures_toys.jpg",
     "name": " Action Figures"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/PretendPlayToys.jpg",
+    "img": "/PlaceholderProductImages/PretendPlayToys.jpg",
     "name": "Play Toys"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Kitchen_fantasticFindsForHome.jpg",
+    "img": "/PlaceholderProductImages/Kitchen_fantasticFindsForHome.jpg",
     "name": "Kitchen"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/HomeDecor_fantasticFindsForHome.jpg",
+    "img": "/PlaceholderProductImages/HomeDecor_fantasticFindsForHome.jpg",
     "name": "Home Decor"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Dining_fantasticFindsForHome.jpg",
+    "img": "/PlaceholderProductImages/Dining_fantasticFindsForHome.jpg",
     "name": "Dining"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/SmartHome_fantasticFindsForHome.jpg",
+    "img": "/PlaceholderProductImages/SmartHome_fantasticFindsForHome.jpg",
     "name": "Smart Home"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ForHer.jpg",
+    "img": "/PlaceholderProductImages/ForHer.jpg",
     "name": "For Her"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ForHim.jpg",
+    "img": "/PlaceholderProductImages/ForHim.jpg",
     "name": "For Him"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ForTeens.jpg",
+    "img": "/PlaceholderProductImages/ForTeens.jpg",
     "name": "For Teens"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ForKids.jpg",
+    "img": "/PlaceholderProductImages/ForKids.jpg",
     "name": "For Kids"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/ConsoleGaming.jpg",
+    "img": "/PlaceholderProductImages/ConsoleGaming.jpg",
     "name": "Console Gaming"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Desktop_pcaccessories.jpg",
+    "img": "/PlaceholderProductImages/Desktop_pcaccessories.jpg",
     "name": "Desktops"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Laptop_pcaccessories.jpg",
+    "img": "/PlaceholderProductImages/Laptop_pcaccessories.jpg",
     "name": "Laptops"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/Harddrive_pcaccessories.jpg",
+    "img": "/PlaceholderProductImages/Harddrive_pcaccessories.jpg",
     "name": "Hard Drives"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/PCAccessories_pcaccessories.jpg",
+    "img": "/PlaceholderProductImages/PCAccessories_pcaccessories.jpg",
     "name": "PC Accessories"
   },
   {
-    "img": "/@fs/C:/Users/syedm/OneDrive/Desktop/AmazonWeb/AmazonClone/src/Components/MainPage/Assets/PlaceholderProductImages/AWholeNewWayToWork.jpg",
+    "img": "/PlaceholderProductImages/AWholeNewWayToWork.jpg",
     "name": "A Whole New Way To Work"
   }
 ]
