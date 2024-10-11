@@ -17,7 +17,6 @@ function Header() {
         changeSideBarStatus(false);
       }, 250);
     }
-    e.stopPropagation();
   };
 
   useEffect(() => {

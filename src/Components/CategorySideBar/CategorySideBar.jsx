@@ -2,9 +2,11 @@ import "./CSS/CategorySideBar.css";
 import emptyPFP from "./Assets/EmptyPFP.jpeg";
 import usFlag from "./Assets/UnitedStatesFlag.png";
 import { useState } from "react";
+import { useAuth } from "../../auth";
 
 function CategorySideBar({ AlterSideBarStatus }) {
   const [barStatus, setBarStatus] = useState(true);
+  const { userDoc, isSignedIn } = useAuth();
 
   return (
     <div className="categorySideBar">
@@ -20,8 +22,8 @@ function CategorySideBar({ AlterSideBarStatus }) {
         <button
           className="backButton"
           onClick={() => {
-            AlterSideBarStatus();
             setBarStatus(false);
+            AlterSideBarStatus();
           }}
         >
           <div className="closeSymbol">&#x2715;</div>
@@ -39,7 +41,7 @@ function CategorySideBar({ AlterSideBarStatus }) {
             }}
           >
             <img className="profileImg" src={emptyPFP} alt="profile picture" />
-            <b>Hello, sign in</b>
+            <b>Hello, {isSignedIn ? userDoc.displayName : "sign in"}</b>
           </a>
         </div>
 

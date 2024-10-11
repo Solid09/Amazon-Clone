@@ -4,11 +4,13 @@ import "./CSS/BottomOfMainPage.css";
 import productPlaceHolderImg from "./Assets/productsPlaceHolderImg.jpg";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../auth";
 
 function BottomOfMainPage() {
   const [isOverflowing, setIsOverflowing] = useState(false);
   const [pageCount, setPageCount] = useState(1);
   const [totalPageCount, setTotalPageCount] = useState(3);
+  const { userDoc, isSignedIn } = useAuth();
 
   useEffect(() => {
     const _unorderedProductsList = document.getElementById("ul-container");
@@ -271,21 +273,25 @@ function BottomOfMainPage() {
           </div>
         </div>
 
-        <div className="bottomMenuDivider"></div>
-        <div className="afterMenuDivider">
-          <span style={{ display: "block", fontSize: "13px" }}>
-            See personalized recommendations
-          </span>
-          <Link to="signin-email" className="signInLink">
-            <b>Sign in</b>
-          </Link>
-          <div style={{ marginBottom: "20px" }}>
-            <span style={{ fontSize: "11px" }}>New customer?</span>
-            <Link to="/signup" className="signUpLink">
-              Start here
-            </Link>
-          </div>
-        </div>
+        {!isSignedIn && (
+          <>
+            <div className="bottomMenuDivider"></div>
+            <div className="afterMenuDivider">
+              <span style={{ display: "block", fontSize: "13px" }}>
+                See personalized recommendations
+              </span>
+              <Link to="/signin-email" className="signInLink">
+                <b>Sign in</b>
+              </Link>
+              <div style={{ marginBottom: "20px" }}>
+                <span style={{ fontSize: "11px" }}>New customer?</span>
+                <Link to="/signup" className="signUpLink">
+                  Start here
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

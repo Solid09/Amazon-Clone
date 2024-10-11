@@ -8,6 +8,7 @@ import AuthPageFooter from "../AuthPageFooter.jsx";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaExclamation } from "react-icons/fa";
+import { signUp } from "../../../auth.js";
 
 function SignUpPage() {
   const navigate = useNavigate();
@@ -23,11 +24,11 @@ function SignUpPage() {
   const [isReEnterPassEmpty, setIsReEnterPassEmpty] = useState(false);
   const [isCompletePass, setIsCompletePass] = useState(true);
 
-  const handleVerfiyEmailBtnClick = () => {
+  const handleVerfiyEmailBtnClick = async () => {
     let verifiedName = false,
       verifiedEmail = false,
       verifiedPass = false;
-      
+
     if (verifyName()) {
       verifiedName = true;
     }
@@ -39,7 +40,12 @@ function SignUpPage() {
     }
 
     if (verifiedName && verifiedEmail && verifiedPass) {
-      navigate("/");
+      const checkSignUp = await signUp(signInEmail, pass, fullName);
+      if (checkSignUp) {
+       navigate("/");
+      } else {
+        // output error for user
+      }
     }
   };
 
@@ -77,9 +83,11 @@ function SignUpPage() {
         setPassIsSame(false);
       }
     };
+
     const checkPassLength = () => {
       if (pass.length < 6) {
         setIsCompletePass(false);
+        return false;
       } else {
         setIsCompletePass(true);
         return true;
@@ -145,7 +153,6 @@ function SignUpPage() {
             placeholder="First and last name"
             onChange={(e) => {
               setFullName(e.target.value);
-              verifyName();
             }}
             required
           ></input>
@@ -194,7 +201,6 @@ function SignUpPage() {
             }
             onChange={(e) => {
               setSignInEmail(e.target.value);
-              verifyEmail();
             }}
             required
           ></input>
@@ -246,7 +252,6 @@ function SignUpPage() {
             placeholder="At least 6 characters"
             onChange={(e) => {
               setPass(e.target.value);
-              verifyPass();
             }}
             required
           ></input>
@@ -293,7 +298,6 @@ function SignUpPage() {
             }
             onChange={(e) => {
               setReEnterPass(e.target.value);
-              verifyPass();
             }}
             required
           ></input>

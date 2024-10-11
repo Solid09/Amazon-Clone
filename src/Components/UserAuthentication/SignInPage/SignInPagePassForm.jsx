@@ -4,19 +4,27 @@ import AuthPageFooter from "../AuthPageFooter";
 import AuthPageTopLogo from "../AuthPageTopLogo";
 
 import { Link, useNavigate } from "react-router-dom";
-import { FaExclamation } from "react-icons/fa";
+import { signIn } from "../../../auth";
+import { FaExclamation, FaExclamationTriangle } from "react-icons/fa";
 
 function SignInPagePass(props) {
   const navigate = useNavigate();
   const [signInPass, setSignInPass] = useState("");
   const [passFieldIsEmpty, setPassFieldIsEmpty] = useState(false);
+  const [errorSigningIn, setErrorSigningIn] = useState(false);
 
-  const handleSignInBtnClick = () => {
+  const handleSignInBtnClick = async () => {
     if (signInPass.length === 0) {
       setPassFieldIsEmpty(true);
     } else {
       setPassFieldIsEmpty(false);
-      navigate("/");
+      const checkSignIn = await signIn(props.userEmail, signInPass);
+      if (checkSignIn) {
+        setErrorSigningIn(false);
+        navigate("/");
+      } else {
+        setErrorSigningIn(true);
+      }
     }
   };
 
@@ -27,6 +35,19 @@ function SignInPagePass(props) {
   return (
     <div className="signInPagePass">
       <AuthPageTopLogo />
+
+      {errorSigningIn && ( // error feedback on wrong login info
+        <div className="signInPagePass-errorSigningIn">
+          <div className="signInPagePass-errorSigningIn-exCarrier"><FaExclamationTriangle /></div>
+          <div>
+            <h3 className="signInPagePass-errorSigningIn-h3">
+              There was a problem
+            </h3>
+            <p className="signInPagePass-errorSigningIn-p">No account found!</p>
+          </div>
+        </div>
+      )}
+
       <div className="signInFormBorder" style={{ margin: "0 0 30px 0" }}>
         <div className="signInFormContainer">
           <h1
@@ -81,7 +102,11 @@ function SignInPagePass(props) {
           <input
             type="password"
             id="signInPassword"
-            className={passFieldIsEmpty ? "signIn-wrongPasswordInput" : "signIn-passwordInput"}
+            className={
+              passFieldIsEmpty
+                ? "signIn-wrongPasswordInput"
+                : "signIn-passwordInput"
+            }
             onChange={(e) => {
               setSignInPass(e.target.value);
             }}
@@ -90,7 +115,7 @@ function SignInPagePass(props) {
           {
             //error on entering null password
             passFieldIsEmpty && (
-              <div style={{display:'flex', marginTop:'5px'}}>
+              <div style={{ display: "flex", marginTop: "5px" }}>
                 <FaExclamation
                   style={{
                     margin: "2px 0 0 0",

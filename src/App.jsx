@@ -12,6 +12,7 @@ import useFetchProductData from "./Hooks/useFetchProductData.jsx";
 import "./App.css";
 import { useState } from "react";
 
+
 function App() {
   const { productData } = useFetchProductData(); //getting data from custom hook
   const [userSignInEmail, setUserSignInEmail] = useState();
@@ -24,8 +25,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/signin-email" element={<SignInPageEmailForm handleSignInEmail={handleSignInEmail}/>} />
-        <Route path="/signin-pass" element={<SignInPagePassForm userEmail={userSignInEmail}/>} />
+        <Route
+          path="/signin-email"
+          element={
+            <SignInPageEmailForm handleSignInEmail={handleSignInEmail} />
+          }
+        />
+        <Route
+          path="/signin-pass"
+          element={<SignInPagePassForm userEmail={userSignInEmail} />}
+        />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<PageNotFoundPage />} />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./CartContainer.css";
 import placeHolderImg from "../Assets/productsPlaceHolderImg.jpg";
@@ -157,12 +158,12 @@ function CartContainer(props) {
                 Shop today's deals
               </a>
               <div className="cartBoxSignedOut-authLinksContainer">
-                <a href="#" className="cartBoxSignedOut-signInLink">
+                <Link to="/signin-email" className="cartBoxSignedOut-signInLink">
                   Sign in to your account
-                </a>
-                <a href="#" className="cartBoxSignedOut-signUpLink">
+                </Link>
+                <Link to="/signup" className="cartBoxSignedOut-signUpLink">
                   Sign up now
-                </a>
+                </Link>
               </div>
             </div>
           </>

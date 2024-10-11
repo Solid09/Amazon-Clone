@@ -6,6 +6,32 @@
   flex-direction: column;
   width: 100vw;
 }
+
+/* ========= Sign In Page Error LogginIn UI ========= */
+.signInPagePass-errorSigningIn{
+  border-radius: 10px;
+  border: 1px solid #c40000;
+  color: #c40000;
+  width: 348px;
+  margin: 5px 0 15px;
+  font-size: 30px;
+  display: flex;
+}
+.signInPagePass-errorSigningIn-exCarrier{
+  margin: 15px 20px 20px 20px;
+}
+.signInPagePass-errorSigningIn-h3{
+  display: inline-block;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 15px 0 10px 0;
+}
+.signInPagePass-errorSigningIn-p{
+  font-size: 13px;
+  color: black;
+  margin: 0 0 2px;
+}
+
 .signInFormBorder {
   border: 1px solid rgba(128, 128, 128, 0.219);
   border-radius: 10px;

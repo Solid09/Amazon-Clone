@@ -10,9 +10,11 @@ import "./CSS/CartPage.css";
 
 import CartContainer from "./subComponents/CartContainer.jsx";
 import CartPageRightContainer from "./subComponents/CartPageRightContainer.jsx";
+import { useAuth } from "../../auth.js";
 
-function CartPage(props) {
+function CartPage() {
   const [cartItems, setCartItems] = useState([]);
+  const { userDoc, isSignedIn } = useAuth();
 
   const addItemsToCart = (item) => {
     setCartItems(cartItems.concat(item));
@@ -34,13 +36,13 @@ function CartPage(props) {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="cartPage">
           <CartContainer
-            isSignedIn={true}
+            isSignedIn={isSignedIn}
             cartItems={cartItems}
             removeCartItem={removeCartItem}
           />
 
           <CartPageRightContainer
-            isSignedIn={true}
+            isSignedIn={isSignedIn}
             cartItems={cartItems}
             addItemsToCart={addItemsToCart}
           />

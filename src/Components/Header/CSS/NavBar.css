@@ -166,6 +166,9 @@
   width: 1.125rem;
   height: 1.125rem; 
 }
+.languageButton:hover .languageButton-blackSpaceHeader{
+  display: block;
+}
 /* == 4 == */
 .authButton{
   cursor: pointer;
@@ -195,6 +198,27 @@
 }
 .authButton:hover{
   border: 1px solid white;
+}
+.authButton:hover .authButton-blackSpaceHeader{
+  display: block !important;
+}
+.authButton-blackSpaceHeader, .languageButton-blackSpaceHeader{
+  height: 100vh;
+  width: 100vw; 
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 99px;
+  background-color: #000000b7;
+  pointer-events: none;
+  display: none;
+}
+/* == special == */
+.logoutBtn{
+  position: absolute;
+  cursor: pointer;
+  top: 67px;
+  right: 240px;
 }
 /* == 5 == */
 .returnsAndOrdersText{
